@@ -1,0 +1,31 @@
+{
+  "name": "practice-authorization-and-authentication",
+  "version": "1.0.0",
+  "description": "practica con nodejs, rest api y jwt",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir build",
+    "dev": "nodemon src/index.js --exec babel-node",
+    "start": "node build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tommysolano/practice-authorization-and-authentication.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tommysolano/practice-authorization-and-authentication/issues"
+  },
+  "homepage": "https://github.com/tommysolano/practice-authorization-and-authentication#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.2",
+    "morgan": "^1.10.0"
+  }
+}
