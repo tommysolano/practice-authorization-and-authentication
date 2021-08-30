@@ -8,8 +8,8 @@ router.get("/", productsCtrl.getProducts)
 
 router.get("/:productId", productsCtrl.getProductById)
 
-router.get("/:productId", productsCtrl.updateProductById)
+router.put("/:productId", productsCtrl.updateProductById)
 
-router.get("/:productId", productsCtrl.deleteProductById)
+router.delete("/:productId", productsCtrl.deleteProductById)
 
 export default router
