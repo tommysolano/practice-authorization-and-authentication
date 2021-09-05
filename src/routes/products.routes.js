@@ -1,8 +1,9 @@
 import {Router} from "express"
 import * as productsCtrl from "../controllers/products.controller"
+import { verifyToken } from "../middlewares"
 const router = Router()
 
-router.post("/", productsCtrl.createProduct)
+router.post("/", verifyToken, productsCtrl.createProduct)
 
 router.get("/", productsCtrl.getProducts)
 
