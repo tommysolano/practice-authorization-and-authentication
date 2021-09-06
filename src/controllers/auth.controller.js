@@ -25,17 +25,15 @@ export const signUp = async (req, res) => {
 
     //guarda en la base de datos
     const savedUser = await newUser.save()
-    console.log(savedUser)
-
+    
     const token = jwt.sign({id: savedUser._id}, config.SECRET, {
         expiresIn: 86400
     })
 
     res.json({token})
     } catch (error) {
-        console.error(error)
+        return res.status(500).json(error)
     }
-
 }
 
 
